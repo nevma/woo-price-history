@@ -1,0 +1,24 @@
+# Pinned transitive dependency versions to resolve known security advisories.
+# All are dev/build-tooling dependencies only (linting/build); they are not
+# shipped in the plugin. Each pin is the minimum safe version per the advisory.
+overrides:
+  brace-expansion@1: 1.1.12
+  brace-expansion@2: 2.0.2
+  '@eslint/plugin-kit': 0.3.4
+  '@babel/helpers': 7.26.10
+  '@babel/runtime': 7.26.10
+  '@babel/plugin-transform-modules-systemjs': 7.29.4
+  js-yaml@3: 3.14.2
+  qs: 6.14.1
+  lodash: 4.17.23
+  ajv@8: 8.18.0
+  minimatch@9: 9.0.6
+  flatted: 3.4.0
+  yaml@1: 1.10.3
+  picomatch@2: 2.3.2
+  fast-uri: 3.1.1
+
+# core-js's postinstall only prints a funding notice and is not needed to build
+# or lint the plugin, so its build script is declined.
+allowBuilds:
+  core-js: false
